@@ -39,6 +39,31 @@ $('#btn-no').on('mouseover',function (e) {
     }
 });
 
+$('#btn-no').on('click',function (e) { 
+    e.preventDefault();
+    $('#btn-yes').css('width', btnWidth + 20);
+    $('#btn-yes').css('height', btnHeight + 20);
+    $('#btn-yes').css('font-size', 0.5+fontSize+'rem');
+    $('#btn-yes').css('transition','500ms');
+    btnWidth = btnWidth + 20
+    btnHeight = btnHeight + 20
+    fontSize = fontSize + 0.5
+
+
+
+    $(this).css('top', random(700)+'px');
+    $(this).css('left', random(1000)+'px');
+    
+
+    $(this).text(words[random(words.length)]);
+    
+    count += 1
+
+    if(count >= words.length){
+        count = 0
+    }
+});
+
 function random(num){
     return Math.floor(Math.random() * num);
 }
@@ -47,6 +72,7 @@ function random(num){
 $('#btn-yes').click(function (e) { 
     e.preventDefault();
 
+    $('.text-container').remove();
     $('.btn-container').remove();
     $('.img-container').append('<img src="https://media.tenor.com/eiMqmu0vXz8AAAAj/kiss.gif" style="width: 300px; height: 300px;">');
     $('#center1').append(
