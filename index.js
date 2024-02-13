@@ -47,5 +47,13 @@ function random(num){
 $('#btn-yes').click(function (e) { 
     e.preventDefault();
 
-    console.log('clicked')
+    $('.btn-container').remove();
+    $('.img-container').append('<img src="https://media.tenor.com/eiMqmu0vXz8AAAAj/kiss.gif" style="width: 300px; height: 300px;">');
+    $('#center1').append(
+        `
+            <div id="msg">
+            <h1><span></span></h1>
+            </div>
+        `
+    );
 });

@@ -23,10 +23,62 @@
         position: absolute;
 
     }
+    body{ 
+    /* background: rgb(85, 173, 89);  */
+    background: rgb(246, 234, 249); 
+  }
+
+#msg{
+    margin: auto;
+    /* border: 5px solid #FFFF00; */
+    text-align: center;
+    /* display: flex;
+    justify-content: center; */
+}
+
+h1{
+  font-size: 5em;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#center1{
+    height: 20%;
+    width: 60%;  
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -10%;
+    margin-left: -30%;
+}
+
+
+
+span::before {
+  content: "World";
+  animation: animate infinite 4s;
+  /* color:red; */
+  padding-left: 10px;
+}
+
+@keyframes animate {
+
+  0% {
+    content: "";
+    /* color:orange; */
+  }
+  100%{
+    content: "Ayieeeeeeeut"
+  }
+}
+
 </style>
-<body class="d-flex justify-content-center align-items-center">
+
+<body class="d-flex justify-content-center align-items-center flex-column">
+    <div id="center1" class="">
+        
+    </div>
     <div class="box">
-        <div class="img-container">
+        <div class="img-container d-flex justify-content-center align-items-center">
             
         </div>
         <div class="btn-container d-flex gap-3">
